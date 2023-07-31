@@ -17,7 +17,7 @@ class game(base): #Cria uma classe para conectar com tabela de jogos
     genre=Column(String) #Liga a informação de genero com sua coluna de mesmo nome.
 
 class user(base): #Cria uma classe para conectar com tabela de usuarios
-    __tablename__="Users" #Marca o nome dtabela que deve ser utuilizada 
+    __tablename__="users" #Marca o nome dtabela que deve ser utuilizada 
     name=Column(String,primary_key=True) #Liga a informação de nome com sua coluna de mesmo nome.
     access=Column(String) #Liga a informação de acesso com sua coluna de mesmo nome.
     email=Column(String) #Liga a informação de email com sua coluna de mesmo nome.
