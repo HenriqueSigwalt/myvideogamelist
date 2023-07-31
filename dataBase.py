@@ -7,6 +7,23 @@ connect=engine.connect() #Cria conexão como o banco de dados
 base=declarative_base() #Cria uma base declarativa
 lm=LoginManager() #Cria um manuseador de login
 
+
+command="""CREATE TABLE IF NOT EXISTS Games (
+	id INTEGER PRIMARY KEY,
+	name TEXT(30),
+	plataform TEXT(20),
+	producer TEXT(30),
+	date TEXT(20),
+	genre TEXT(20)
+);"""
+connect.execute(text(command))
+command="""CREATE TABLE IF NOT EXISTS users (
+	name TEXT(30) PRIMARY KEY,
+	access TEXT(10),
+	email TEXT(30),
+	password TEXT(30)
+);"""
+connect.execute(text(command))
 class game(base): #Cria uma classe para conectar com tabela de jogos
     __tablename__="Games" #Marca o nome dtabela que deve ser utuilizada 
     id=Column(Integer,primary_key=True) #Liga a informação de id com sua coluna de mesmo nome. Marca como chave primaria
