@@ -1,0 +1,7 @@
+body{background-color: #2E51A2;} /*Muda cor de fundo do site para um azul que eu escolhi*/
+#header{background-color: black; font-size:200%; padding-bottom:2%; padding-top:2%;}/*Muda a cor de fundo do cabeçalho para preto, muda o tamanho da fonte e coloca um espaço vazio acima e abaixo do texto*/
+#head{margin-left:3%;margin-right:57%;}/*Coloca uma margem entre o titulo no cabeçalho e os botões*/
+#buttons{text-align: center; font-size:200%;color: rgb(255, 255, 255);padding-top:5%;}/*Alinha todas as divs com esse id para o centro, muda o tamanho e cor da fonte e coloca um espaço vazio abaixo dos elementos*/
+a:link,a:visited,a:hover,a:active{color: aliceblue;}/*muda a cor do texto dos link para branco*/
+a{margin-right:3%;}/*coloca uma margem para a direita de todos os links*/
+p{color: aliceblue;font-size:200%;}/*muda a cor e tamanho da fonte de todos os paragrafos de texto*/

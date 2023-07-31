@@ -1,0 +1,30 @@
+{%extends "base.html"%}<!--Recebe as inforações do cabeçalho-->
+{%block page%}<!--conteudo unico da pagina-->
+<form action="{{ url_for('admin') }}" id="buttons" method="post"><!--Formulario que recebe as informações sobre o jogo a ser editado-->
+    <label for="name">Which game do you want to edit</label><!--Pergunta qual jogo será editado-->
+    <br>
+    <select name="name" id="name"><!--Recebe o valor do jogo a ser editado-->
+        <option value=""></option><!--Cria uma opção em branco como padrão-->
+        {% for i in games %}<!--Cria uma opção para cada jogo no banco de dados-->
+        <option value={{i.id}}>{{i.name}}</option><!--Mostra o nome do jogo e retorna o id dele como valor-->
+        {% endfor %}
+    </select>
+    <br>
+    <label for="atribute">Which atribute would you like to edit</label><!--Texto perguntando qual atributo do jogo deve ser editado-->
+    <br>
+    <select name="atribute" id="atribute"><!--Recebe o valor de qual atributo será editado-->
+        <option value=""></option><!--Cria uma opção em branco como padrão-->
+        <option value="name">Name</option><!--Opção para editar o nome do jogo-->
+        <option value="plataform">Plataform</option><!--Opção para editar a plataforma do jogo-->
+        <option value="producer">Producer</option><!--Opção para editar a produtora do jogo-->
+        <option value="date">Release date</option><!--Opção para editar a data de lançamento do jogo-->
+        <option value="genre">Genre</option><!--Opção para editar o genero do jogo-->
+    </select>
+    <br>
+    <label for="change">What is the new value</label><!--Texto pedindo qual o novo valor que substituirá o atual-->
+    <br>
+    <input type="text" id="change" name="change"><!--Recebe o novo valor-->
+    <br>
+    <button id="edit" name="edit" type="submit">Save change</button><!--Botão que envia o formulario-->
+</form>
+{%endblock%}<!--Fim do conteudo unico da pagina-->

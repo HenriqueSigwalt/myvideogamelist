@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>MyVideoGameList</title><!--Define nome do site que apararece na janela-->
+        <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css') }}"><!--Conecta ao arquivo de css do bootstrap-->
+        <link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}"><!--Conecta ao arquivo de css geral do site-->
+    </head>
+    <form action="{{ url_for('direct') }}" id="header" method="post"><!--Formulario que encapsula o cabeçalho-->
+        <a href="{{ url_for('landing') }}" id="head">MyVideoGameList</a><!--Nome do site com link para a página inicial-->
+        {%if current_user.is_authenticated%}<!--Se um usuario estiver logado mostra os seguintes elementos-->
+        <button id="profile" name="profile" type="submit">Profile</button><!--Botão para acessar o perfil-->
+        <button id="logout" name="logout" type="submit">Loggout</button><!--Botão para loggout-->
+        {% else %}<!--Se nenhum usuario estiver logado apresenta os seguintes elementos-->
+        <button id="login" name="login" type="submit">login</button><!--Botão para realizar login-->
+        <button id="createAccount" name="createAccount" type="submit">Create Account</button><!--Botão para criar conta-->
+        {% endif %}
+    </form>
+    {% block  page%}{% endblock%}<!--Permite a adição do conteudo especifico de cada página-->
+</html>

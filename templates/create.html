@@ -1,0 +1,18 @@
+{%extends "base.html"%}<!--Recebe as inforações do cabeçalho-->
+{%block page%}<!--conteudo unico da pagina-->
+<form action="{{ url_for('landing') }}" id="buttons" method="post"><!--Formulario que recebe as informações do novo usuario-->
+    <label for="name">User name</label><!--Texto pedindo o nome do novo usuario-->
+    <input type="text" id="name" name="name"><!--Recebe o valor do novo usuario-->
+    <br>
+    <label for="email">E-mail</label><!--Texto pedindo o email do novo usuario-->
+    <input type="text" name="email" id="email"><!--Recebe o email do novo usuario-->
+    <br>
+    <label for="password">Password</label><!--Texto pedindo a senha do novo usuario-->
+    <input type="text" id="password" name="password"><!--Recebe a senha do novo usuario-->
+    <br>
+    <label for="confirm">Confirm password</label><!--Texto pedindo a confirmação de senha-->
+    <input type="text" name="confirm" id="confirm"><!--Recebe a confirmação da senha-->
+    <br>
+    <button type="submit" id="create" name="create">create account</button><!--Botão para enviar as informações-->
+</form>
+{%endblock%}<!--Fim do conteudo unico da pagina-->

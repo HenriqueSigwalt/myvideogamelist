@@ -1,0 +1,10 @@
+{%extends "base.html"%}<!--Recebe as inforações do cabeçalho-->
+{%block page%}<!--conteudo unico da pagina-->
+    <div id="buttons"><!--Divisão que mostra todos os jogos disponiveis-->
+    <label for="games" id="recent">Games available</label>
+    <br>
+        {%for i in game%}<!--Cria um elemento para cada jogo no banco de dados-->
+        <a href="{{ url_for('show',id=i.name) }}" id="opt" name={{i.name}}>{{i.name}}</a><!--Link que leva para a página do jogo. O texto do link é o nome do jogo-->
+        {% endfor %}
+    </div>
+{%endblock%}<!--Fim do conteudo unico da pagina-->

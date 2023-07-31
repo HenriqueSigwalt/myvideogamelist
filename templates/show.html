@@ -1,0 +1,10 @@
+{%extends "base.html"%}<!--Recebe as inforações do cabeçalho-->
+{%block page%}<!--conteudo unico da pagina-->
+<div><!---->
+    <p>Name : {{game.name}}</p><!--Texto com o nome do jogo-->
+    <p>Genre : {{game.genre}}</p><!--Texto com o genero do jogo-->
+    <p>Studio : {{game.producer}}</p><!--Texto com o studio do jogo-->
+    <p>Plataform : {{game.plataform}}</p><!--Texto com a plataforma do jogo-->
+    <p>Release date : {{game.date}}</p><!--Texto com a data de lançamento do jogo-->
+</div>
+{%endblock%}<!--Fim do conteudo unico da pagina-->

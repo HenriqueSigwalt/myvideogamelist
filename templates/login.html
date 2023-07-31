@@ -1,0 +1,12 @@
+{%extends "base.html"%}<!--Recebe as inforações do cabeçalho-->
+{%block page%}<!--conteudo unico da pagina-->
+<form action="{{ url_for('landing') }}" id="buttons" method="post"><!--Formulario que recebe as informações do usario que está tentando logar-->
+    <label for="name">User name</label><!--Texto pedindo o nome de usuario-->
+    <input type="text" id="name" name="name"><!--Recebe o nome de usuario-->
+    <br>
+    <label for="password">Password</label><!--Texto pedindo a senha-->
+    <input type="text" id="password" name="password"><!--Recebe a senha-->
+    <br>
+    <button type="submit" id="log" name="log">Login</button><!--Botão que envia o formulario-->
+</form>
+{%endblock%}<!--Fim do conteudo unico da pagina-->
